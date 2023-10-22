@@ -1,0 +1,22 @@
+
+
+___________________________________________________________________________________________________________________________________________
+|              |                                                     median verdi                                                         |
+|-----------------------------------------------------------------------------------------------------------------------------------------|
+|antall verdier|         100        |     1000          |       10 000      |     100 000        |    1 000 000       |     10 000 000    |
+|-----------------------------------------------------------------------------------------------------------------------------------------|
+|VenstreRadix  |      0.003238      |   0.027763        |      0.294511     |   4.626083         |    58.040254       |     427.302035    |
+|-----------------------------------------------------------------------------------------------------------------------------------------|
+|kvikksort     |      0.003093      |   0.063147        |      0.52289      |     6.434421       |     77.398941      |     917.750813    |
+|-----------------------------------------------------------------------------------------------------------------------------------------|
+|Speedup       | 0.9552192711550339 | 2.274502035082664 | 1.775451511148989 | 1.3909004659017141 | 1.3335389779651894 | 2.147780112959209 |
+|-----------------------------------------------------------------------------------------------------------------------------------------|
+
+
+Jeg mener at venstre Radix er en stabil sorterings algorytme som klare aa haandtere like verdier.
+Dette skjer paa grunn av at vi flytter over verdiene fra a til b i den rekkefølgen vi finner dem.
+Saa hvis sifferverdier er like vil de grupperes i den rekkefolgen de er funnet.
+
+venstreRadix er raskere enn kvikksort paa store mender paa grunn av at den iterere over elementene n ganger ( O(n) ), mens kvikksort itererer over elementene n² ganger ( O(n²) )
+
+kvikksort er raskere en venstreRadix paa grunn av at RadixSort har noe kode som bruker konstant tid. denne konstante tiden gjor at den ikke er effektiv ved faa verdier.
